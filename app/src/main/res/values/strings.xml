@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">my Placement</string>
+    <string name="login">Login Here</string>
+    <string name="welcome">Welcome</string>
+    <string name="start">Lets get started</string>
+    <string-array name="users">
+        <item>Select Your Type</item>
+        <item>Company</item>
+        <item>Student</item>
+    </string-array>
+    <string name="forgot">Forgot Password ?</string>
+    <string name="noaccount">Dont Have An Account?</string>
+    <string name="register">Register Now</string>
+</resources>
+
