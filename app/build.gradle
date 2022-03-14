@@ -5,7 +5,7 @@ android {
     buildToolsVersion "32.0.0"
     defaultConfig {
         applicationId "com.example.myplacement"
-        minSdkVersion 27
+        minSdkVersion 21
         targetSdkVersion 32
         versionCode 1
         versionName "1.0"

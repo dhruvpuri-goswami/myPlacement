@@ -11,5 +11,6 @@
     <string name="forgot">Forgot Password ?</string>
     <string name="noaccount">Dont Have An Account?</string>
     <string name="register">Register Now</string>
+    <string name="haveacc">Do you Have An Account?</string>
 </resources>
 

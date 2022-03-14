@@ -15,5 +15,4 @@
         android:transitionName="logo"
         android:src="@drawable/mainlogo" />
 
-
 </RelativeLayout>
