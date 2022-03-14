@@ -12,7 +12,7 @@ import android.widget.Toast;
 import com.example.myplacement.MyDbHandler.CompanyDB;
 
 public class CompanyLogin extends AppCompatActivity {
-    CompanyDB c = new CompanyDB(CompanyLogin.this);
+    CompanyDB c;
     EditText uname,pass;
 
     @Override
@@ -30,17 +30,12 @@ public class CompanyLogin extends AppCompatActivity {
 
     public void OnLoginClicked(View view) {
         String email = uname.getText().toString();
-        String password = pass.getText().toString();
-        if(email.equals("")||password.isEmpty()){
-            Toast.makeText(getApplicationContext(),"Please enter all fields",Toast.LENGTH_SHORT).show();
+        String psw = pass.getText().toString();
+        if(email.equals("lnt@gmail.com") && psw.equals("lnt")){
+            Toast.makeText(getApplicationContext(),"Login Successfully...",Toast.LENGTH_SHORT).show();
         }
         else {
-            if(c.checkCompany(email,password)){
-                Toast.makeText(getApplicationContext(),"Login Successfully...",Toast.LENGTH_SHORT).show();
-            }
-            else {
-                Toast.makeText(getApplicationContext(),"Invalid details",Toast.LENGTH_SHORT).show();
-            }
+            Toast.makeText(getApplicationContext(),"Please enter valid fields !..",Toast.LENGTH_SHORT).show();
         }
     }
 }

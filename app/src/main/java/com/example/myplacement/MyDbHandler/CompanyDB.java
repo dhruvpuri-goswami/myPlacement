@@ -40,17 +40,11 @@ public class CompanyDB extends SQLiteOpenHelper {
 
     public Boolean checkCompany(String username,String password){
         SQLiteDatabase db = getWritableDatabase();
-        String[] colums = {Params.KEY_COMPANY_ID};
-        String selection = Params.KEY_COMPANY_EMAIL + "=?" + " AND " + Params.KEY_COMPANY_PASS + "=?";
-        String[] selectionArgs = {username,password};
-        Cursor cursor = db.query(Params.TABLE_NAME,colums,selection,selectionArgs,null,null,null);
-        int count = cursor.getCount();
-        cursor.close();
-        db.close();
-        if(count>0){
+        Cursor cursor = db.rawQuery("select * from tbl_company where email=? and password=?",new String[] {username,password});
+        if(cursor.getCount()>0){
             return true;
         }
-        return false;
+        else return false;
     }
 
 
