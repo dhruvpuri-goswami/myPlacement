@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CompanyLogin"></activity>
-        <activity android:name=".Register" />
+        <activity android:name=".AdminLogin"></activity>
+        <activity android:name=".CompanyLogin" />
+        <activity android:name=".CompanyRegister" />
         <activity android:name=".Select" />
         <activity android:name=".splash_screen">
             <intent-filter>
@@ -19,7 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".StudentLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

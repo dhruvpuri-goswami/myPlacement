@@ -5,11 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Spinner;
 import android.widget.Toast;
-
-import java.lang.reflect.Array;
 
 public class Select extends AppCompatActivity {
 
@@ -26,11 +23,15 @@ public class Select extends AppCompatActivity {
     public void OnProcessClicked(View view) {
         String user = sp.getSelectedItem().toString();
         if(user.equals("Student")){
-        Intent process = new Intent(Select.this, MainActivity.class);
+        Intent process = new Intent(Select.this, StudentLogin.class);
         startActivity(process);
         }
         else if(user.equals("Company")){
             Intent intent = new Intent(Select.this,CompanyLogin.class);
+            startActivity(intent);
+        }
+        else if(user.equals("Admin")){
+            Intent intent = new Intent(Select.this,AdminLogin.class);
             startActivity(intent);
         }
         else{

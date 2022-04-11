@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".StudentLogin">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/top">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="300dp"
+            android:layout_height="130dp"
+            android:transitionName="logo"
+            android:src="@drawable/mainlogo" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:textColor="@color/textcolor"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"
+        android:layout_marginLeft="20dp"
+        android:text="@string/welcome" />
+
+    <TextView
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/textcolor"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/welcome"
+        android:layout_marginLeft="25dp"
+        android:text="Login Your Self ..." />
+
+
+    <soup.neumorphism.NeumorphCardView
+        style="@style/Widget.Neumorph.CardView"
+        android:layout_width="match_parent"
+        android:layout_below="@id/start"
+        android:layout_height="80dp"
+        android:id="@+id/emailip"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:neumorph_shapeType="pressed">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/email"
+            android:hint="Enter Email ID "
+            android:paddingLeft="20dp"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/no_bg"/>
+    </soup.neumorphism.NeumorphCardView>
+    <soup.neumorphism.NeumorphCardView
+        style="@style/Widget.Neumorph.CardView"
+        android:layout_width="match_parent"
+        android:layout_below="@id/emailip"
+        android:layout_height="80dp"
+        android:id="@+id/passip"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:neumorph_shapeType="pressed">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/pass"
+            android:hint="Enter Password"
+            android:paddingLeft="20dp"
+            android:inputType="textPassword"
+            android:background="@drawable/no_bg"/>
+    </soup.neumorphism.NeumorphCardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot"
+        android:layout_below="@id/passip"
+        android:background="@drawable/no_bg"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/textcolor"
+        android:layout_marginRight="30dp"/>
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/submit"
+        style="@style/Widget.Neumorph.Button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Sign In"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:neumorph_backgroundColor="@color/textcolor"
+        app:neumorph_shapeType="flat" />
+
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="170dp"
+        android:layout_below="@id/submit"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/bg" />
+
+
+</RelativeLayout>

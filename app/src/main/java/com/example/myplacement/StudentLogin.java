@@ -6,18 +6,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class StudentLogin extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_student_login);
 
-        Utils.blackIconStatusBar(MainActivity.this,R.color.white);
+        Utils.blackIconStatusBar(StudentLogin.this,R.color.white);
     }
 
     public void OnRegisterClicked(View view) {
-        Intent register = new Intent(MainActivity.this, Select.class);
+        Intent register = new Intent(StudentLogin.this, Select.class);
         startActivity(register);
     }
 }

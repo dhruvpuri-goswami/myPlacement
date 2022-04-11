@@ -5,6 +5,7 @@
     <string name="start">Lets get started</string>
     <string-array name="users">
         <item>Select Your Type</item>
+        <item>Admin</item>
         <item>Company</item>
         <item>Student</item>
     </string-array>
