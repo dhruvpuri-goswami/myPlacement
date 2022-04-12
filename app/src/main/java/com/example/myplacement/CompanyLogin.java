@@ -8,8 +8,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.myplacement.data.MyDbHandler;
+import com.example.myplacement.model.Company;
+
 public class CompanyLogin extends AppCompatActivity {
     EditText uname,pass;
+    MyDbHandler db =new MyDbHandler(CompanyLogin.this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +32,8 @@ public class CompanyLogin extends AppCompatActivity {
         String email = uname.getText().toString();
         String psw = pass.getText().toString();
         if(email.equals("lnt@gmail.com") && psw.equals("lnt")){
-            Toast.makeText(getApplicationContext(),"Login Successfully...",Toast.LENGTH_SHORT).show();
-
-        }
-        else {
-            Toast.makeText(getApplicationContext(),"Please enter valid fields !..",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(CompanyLogin.this,CompanyDashboard.class);
+            startActivity(intent);
         }
     }
 }

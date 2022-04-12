@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".CompanyDashboard">
+
+    <soup.neumorphism.NeumorphCardView
+        style="@style/Widget.Neumorph.CardView"
+        android:id="@+id/dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:neumorph_backgroundColor="@color/textcolor"
+        android:padding="25dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Dashboard"
+            android:textColor="@color/white"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-smallcaps"
+            android:drawableLeft="@drawable/ic_dashboard"
+            android:drawablePadding="7dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/no_bg"/>
+
+    </soup.neumorphism.NeumorphCardView>
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dashboard"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="15dp">
+
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/add"
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:text="Add Job"
+            android:drawableTop="@drawable/ic_add_student"
+            android:drawablePadding="5dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:padding="30dp"
+            android:onClick="OnAddJobClicked"
+            app:neumorph_backgroundColor="@color/textcolor"
+            app:neumorph_shapeType="flat" />
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/submit2"
+            android:layout_toRightOf="@id/add"
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:text="Company                      Profile"
+            android:drawableTop="@drawable/ic_company_white"
+            android:drawablePadding="5dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:padding="30dp"
+            app:neumorph_backgroundColor="@color/textcolor"
+            app:neumorph_shapeType="flat" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Active Jobs"
+        android:layout_below="@id/r1"
+        android:textSize="20dp"
+        android:textColor="@color/textcolor"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/activejobs"/>
+
+    <soup.neumorphism.NeumorphCardView
+        style="@style/Widget.Neumorph.CardView"
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/activejobs"
+        android:padding="25dp">
+        <ListView
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            />
+
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphCardView
+        style="@style/Widget.Neumorph.CardView"
+        android:id="@+id/appli"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/list"
+        app:neumorph_backgroundColor="@color/textcolor"
+        android:padding="20dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Total Active Applications"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-smallcaps"
+            android:background="@drawable/no_bg"/>
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphCardView
+        style="@style/Widget.Neumorph.CardView"
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appli"
+        android:layout_centerHorizontal="true"
+        android:padding="30dp">
+
+        <TextView
+            android:id="@+id/countjobs"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:textColor="@color/textcolor"
+            android:textSize="25dp"
+            android:text="2"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:fontFamily="sans-serif-smallcaps"
+            android:background="@drawable/no_bg"/>
+    </soup.neumorphism.NeumorphCardView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appli"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="111dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/no_bg"
+        android:drawableLeft="@drawable/ic_power_settings_new_black_24dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Logout"
+        android:onClick="onLogoutClicked"
+        android:textColor="@color/textcolor"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

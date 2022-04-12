@@ -6,10 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.myplacement.data.MyDbHandler;
+import com.example.myplacement.model.Company;
 
 public class CompanyRegister extends AppCompatActivity {
     EditText no,name,add,email,pass,conpass;
-
+    MyDbHandler db =new MyDbHandler(CompanyRegister.this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +29,21 @@ public class CompanyRegister extends AppCompatActivity {
     }
 
     public void OnRegisterClicked(View view) {
-
+        Company company=new Company();
+        company.setName(name.getText().toString());
+        company.setNo(no.getText().toString());
+        company.setAddress(add.getText().toString());
+        company.setEmail(email.getText().toString());
+        if(pass.getText().toString().equals(conpass.getText().toString())){
+            company.setPass(pass.getText().toString());
+            db.addCompany(company);
+            Toast.makeText(getApplicationContext(),"Company Registered Successfully...",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(CompanyRegister.this,CompanyLogin.class);
+            startActivity(intent);
+        }
+        else {
+            Toast.makeText(getApplicationContext(),"Password Mismatch !!!",Toast.LENGTH_SHORT).show();
+        }
     }
 
 

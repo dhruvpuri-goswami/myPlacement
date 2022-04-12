@@ -13,5 +13,11 @@
     <string name="noaccount">Dont Have An Account?</string>
     <string name="register">Register Now</string>
     <string name="haveacc">Do you Have An Account?</string>
+    <string name="college">(Dr. S and S.S Ghandhy College,Surat)</string>
+    <string-array name="company">
+        <item>Android Developer</item>
+        <item>UI/UX Designer</item>
+        <item>Project Manager</item>
+    </string-array>
 </resources>
 

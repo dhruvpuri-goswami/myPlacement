@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AdminLogin"></activity>
+        <activity android:name=".AddJob"></activity>
+        <activity android:name=".StudentDashboard" />
+        <activity android:name=".CompanyDashboard" />
+        <activity android:name=".AdminDashboard" />
+        <activity android:name=".AdminLogin" />
         <activity android:name=".CompanyLogin" />
         <activity android:name=".CompanyRegister" />
         <activity android:name=".Select" />
@@ -20,13 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StudentLogin">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".StudentLogin"/>
     </application>
 
 </manifest>

@@ -110,6 +110,7 @@
         android:text="Sign In"
         android:textColor="@color/white"
         android:textSize="16sp"
+        android:onClick="OnLoginClicked"
         app:neumorph_backgroundColor="@color/textcolor"
         app:neumorph_shapeType="flat" />
 

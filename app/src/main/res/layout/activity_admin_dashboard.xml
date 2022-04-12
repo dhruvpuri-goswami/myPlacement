@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".AdminDashboard">
+
+    <soup.neumorphism.NeumorphCardView
+        style="@style/Widget.Neumorph.CardView"
+        android:id="@+id/dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:neumorph_backgroundColor="@color/textcolor"
+        android:padding="25dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Dashboard"
+            android:textColor="@color/white"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-smallcaps"
+            android:drawableLeft="@drawable/ic_dashboard"
+            android:drawablePadding="7dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/no_bg"/>
+
+    </soup.neumorphism.NeumorphCardView>
+
+    <TextView
+        android:id="@+id/adminname"
+        android:layout_below="@id/dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello Prof. Umang Shukla"
+        android:textColor="@color/textcolor"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="29dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/no_bg"/>
+
+    <TextView
+        android:id="@+id/admincollege"
+        android:layout_below="@id/adminname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/college"
+        android:textColor="@color/textcolor"
+        android:textSize="20dp"
+        android:gravity="right"
+        android:layout_marginRight="25dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="29dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/no_bg"/>
+
+            <RelativeLayout
+                android:id="@+id/r1"
+                android:layout_below="@id/admincollege"
+                android:layout_margin="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <soup.neumorphism.NeumorphCardView
+                    style="@style/Widget.Neumorph.CardView"
+                    android:layout_width="290dp"
+                    android:id="@+id/company"
+                    android:layout_height="wrap_content"
+                    android:padding="25dp"
+                    app:neumorph_shapeType="flat">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/no_bg"
+                        android:textSize="20dp"
+                        android:textAlignment="viewStart"
+                        android:text="Total Companies"
+                        android:drawableLeft="@drawable/ic_account_balance_black_24dp"
+                        android:drawablePadding="5dp"/>
+
+                </soup.neumorphism.NeumorphCardView>
+
+                <soup.neumorphism.NeumorphCardView
+                    style="@style/Widget.Neumorph.CardView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/company"
+                    android:padding="25dp"
+                    app:neumorph_backgroundColor="@color/textcolor">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/no_bg"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:text="7"/>
+
+                </soup.neumorphism.NeumorphCardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/r2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_below="@id/r1">
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="290dp"
+                android:id="@+id/students"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                app:neumorph_shapeType="flat">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/no_bg"
+                    android:textSize="20dp"
+                    android:textAlignment="viewStart"
+                    android:text="Total Students"
+                    android:drawableLeft="@drawable/ic_student"
+                    android:drawablePadding="5dp"/>
+
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/students"
+                android:padding="25dp"
+                app:neumorph_backgroundColor="@color/textcolor">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/no_bg"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:text="16"/>
+
+            </soup.neumorphism.NeumorphCardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/r2"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="20dp">
+
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/add"
+                    style="@style/Widget.Neumorph.Button"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:text="Add                Student"
+                    android:drawableTop="@drawable/ic_add_student"
+                    android:drawablePadding="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:padding="30dp"
+                    app:neumorph_backgroundColor="@color/textcolor"
+                    app:neumorph_shapeType="flat" />
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/submit"
+                    android:layout_toRightOf="@id/add"
+                    style="@style/Widget.Neumorph.Button"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:text="Applied Company"
+                    android:drawableTop="@drawable/ic_apply"
+                    android:drawablePadding="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:padding="30dp"
+                    app:neumorph_backgroundColor="@color/textcolor"
+                    app:neumorph_shapeType="flat" />
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/add2"
+                    style="@style/Widget.Neumorph.Button"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@id/add"
+                    android:layout_marginTop="20dp"
+                    android:text="Approved Company"
+                    android:drawableTop="@drawable/ic_company_white"
+                    android:drawablePadding="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:padding="30dp"
+                    app:neumorph_backgroundColor="@color/textcolor"
+                    app:neumorph_shapeType="flat" />
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/submit2"
+                    android:layout_toRightOf="@id/add"
+                    style="@style/Widget.Neumorph.Button"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@id/submit"
+                    android:layout_marginTop="20dp"
+                    android:text="My                   Profile"
+                    android:drawableTop="@drawable/ic_person_white"
+                    android:drawablePadding="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:padding="30dp"
+                    app:neumorph_backgroundColor="@color/textcolor"
+                    app:neumorph_shapeType="flat" />
+
+            </RelativeLayout>
+
+
+</RelativeLayout>
